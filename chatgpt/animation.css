@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimized CSS Animation</title>
-    <style>
-        .animate-box {
-            width: 100px;
-            height: 100px;
-            background-color: blue;
-            animation: colorSizeChange 5s ease-in-out infinite;
-        }
+/* styles.css */
 
-        @keyframes colorSizeChange {
-            0%, 100% {
-                background-color: blue;
-                transform: scale(1);
-            }
-            50% {
-                background-color: red;
-                transform: scale(2);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="animate-box"></div>
-</body>
-</html>
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Initial color */
+    margin: 100px auto; /* Center the box */
+    border-radius: 10px; /* Optional: rounded corners */
+    
+    /* Animation properties */
+    animation: changeColorAndSize 4s infinite alternate;
+  }
+  
+  /* Define the keyframes for the animation */
+  @keyframes changeColorAndSize {
+    0% {
+      background-color: #3498db; /* Start with blue */
+      transform: scale(1); /* Original size */
+    }
+    50% {
+      background-color: #e74c3c; /* Transition to red */
+      transform: scale(1.5); /* Increase size by 50% */
+    }
+    100% {
+      background-color: #2ecc71; /* Transition to green */
+      transform: scale(1); /* Return to original size */
+    }
+  }
+  
 
